@@ -1,0 +1,6 @@
+IO.inspect 1..5 |> Enum.map(fn(x) -> x * x end), label: "Map"
+IO.inspect 1..100 |> Enum.filter(fn(x) -> rem(x, 2) != 0 end), label: "Odd"
+IO.inspect 1..10 |> Enum.take_every(2), label: "Take every 2"
+IO.inspect 1..10 |> Enum.take(2), label: "Take 2"
+IO.inspect 1..10 |> Enum.map(fn(x) -> x * x end) |> Enum.sum, label: "Sum"
+IO.inspect 1..10 |> Enum.reduce(fn(x, acc) -> x * x + acc end), label: "Reduce"
